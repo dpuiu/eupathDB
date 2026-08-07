@@ -9,7 +9,11 @@ Here we provide the cleaned eukaryotic pathogen genome FASTA files that can be u
 metagenomics classification/analysis programs. For use, download each of the .tgz files and untar
 the FASTA files using:  
 
-`for file in *.tgz; do tar -xvzf $file -C my_eupathDB_folder/; done`
+```bash
+for file in *.tgz
+  do tar -xvzf $file -C my_eupathDB_folder/
+done
+```
 
 ## EuPathDB46 vs. EuPathDB26
 
@@ -31,18 +35,26 @@ strain.
   
 To build a database containing these genomes:
 
-1.  Make a folder for the database: `mkdir my_db`
-2.  Change directory to the database folder: `cd my_db`
-3.  Download the NCBI taxonomy: `kraken2-build --download-taxonomy --db .`
-4.  Download the [**`seqid2taxid.map`**](ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/seqid2taxid.map)
-    file for EuPathDB46: `wget ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/seqid2taxid.map`
-5.  Make a libarary folder: `mkdir library`
-6.  Move to the library folder: `cd library/`
-7.  Download all of the genomes using the links below:
-    `wget ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/AmoebaDB46.tgz`
-8.  Uncompress all of the genome folders: ` tar -xzvf AmoebaDB46.tgz`
-9.  Move back to the database folder: `cd ../`
-10. Build the Kraken/Kraken 2 database: `kraken2-build --build --db . `
+1.  Make a folder for the database:  
+  `mkdir my_db`
+2.  Change directory to the database folder:   
+  `cd my_db`
+3.  Download the NCBI taxonomy:  
+  `kraken2-build --download-taxonomy --db .`
+4.  Download the [**`seqid2taxid.map`**](ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/seqid2taxid.map) file for EuPathDB46:   
+  `wget ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/seqid2taxid.map`
+5.  Make a libarary folder:  
+  `mkdir library`
+6.  Move to the library folder:   
+  `cd library/`
+7.  Download all of the genomes using the links below:  
+  `wget ftp://ftp.ccb.jhu.edu/pub/data/EuPathDB46/AmoebaDB46.tgz`
+8.  Uncompress all of the genome folders:  
+  ` tar -xzvf AmoebaDB46.tgz`
+9.  Move back to the database folder:  
+  `cd ../`
+10. Build the Kraken/Kraken 2 database:  
+  `kraken2-build --build --db . `
 
 
 | Class                       | Genus Composition *                                                                                                                                                     | Number of EuPathDB-48 Files | Download                                                                                               | Uncompressed |
