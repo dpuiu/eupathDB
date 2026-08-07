@@ -115,5 +115,5 @@ J. Lu, S.L. Salzberg. (2018). "Removing contaminants from databases of draft gen
 
 ## Authors/Contributors
 
-[Jennifer Lu, Ph.D.](http://ccb.jhu.edu/people/jennifer.lu/)
+[Jennifer Lu, Ph.D.](http://ccb.jhu.edu/people/jennifer.lu/)  
 [Steven Salzberg, Ph.D.](https://salzberg-lab.org/)    
