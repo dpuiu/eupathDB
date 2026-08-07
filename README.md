@@ -67,30 +67,34 @@ This file contains all 245 genomes in a single folder. Each genome is a multi-fa
 [Kraken2](http://ccb.jhu.edu/software/kraken2)-compatible headers. To build a Kraken/Kraken2
 database with these files, unzip the folder and place it directly within the `library/` folder.  
 
-- **For example, to build a database with human, bacteria, and eupathDB:**
-- `tar -xzvf eupathDB.tar.gz` [^creates library folder with eupathDB files]
-- `mv library/ $DBNAME/library/ `
-- `kraken2-build --download-library bacteria --db $DBNAME`
-- `kraken2-build --download-library human --db $DBNAME`
-- `kraken2-build --build --db $DBNAME`
--   
-- (It is NOT required to use `kraken2-build --add-to-library` for these files.)
+**For example, to build a database with human, bacteria, and eupathDB:**
+```bash
+tar -xzvf eupathDB.tar.gz
+mv library/ $DBNAME/library/ 
+kraken2-build --download-library bacteria --db $DBNAME
+kraken2-build --download-library human --db $DBNAME
+kraken2-build --build --db $DBNAME
+```
 
-  
+(It is NOT required to use `kraken2-build --add-to-library` for these files.)
+
 **EuPathDB-28 Kraken2 Database: [eupathDB_kraken2.tar.gz](dl/eupathDB_kraken2.tar.gz)** (5.6 GB)  
 This folder is a pre-built Kraken2 database of the 245 eupathDB genomes. It contains three files:
 `hash.k2d, opts.k2d,` and `taxo.k2d`.  
 
-- **For example, to use this pre-built database:**
-- `tar -xzvf eupathDB_kraken2.tar.gz`
-- `kraken2 --db eupathDB_kraken2 MYSAMPLE.FNA > MYSAMPLE.KRAKEN2`
--   
-- (Do not run `kraken2-build --build` on this folder.)
-- (This database is NOT compatible with Kraken 1)
+**For example, to use this pre-built database:**
 
-*For more information on Kraken and Kraken 2, see:* [Kraken's
-Website](http://ccb.jhu.edu/software/kraken) and [Kraken2's
-Website](http://ccb.jhu.edu/software/kraken2)  
+```bash
+tar -xzvf eupathDB_kraken2.tar.gz
+kraken2 --db eupathDB_kraken2 MYSAMPLE.FNA > MYSAMPLE.KRAKEN2
+```
+
+(Do not run `kraken2-build --build` on this folder.)  
+(This database is NOT compatible with Kraken 1)
+
+*For more information on Kraken and Kraken 2, see:* 
+[Kraken's Website](http://ccb.jhu.edu/software/kraken) and   
+[Kraken2's Website](http://ccb.jhu.edu/software/kraken2)  
 
 | Class                    | Genus Composition *                                                                                          | Number of EuPathDB-28 Files | Download                                                                                           | Uncompressed |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------ | --------------------------: | -------------------------------------------------------------------------------------------------- | -----------: |
@@ -107,11 +111,12 @@ Website](http://ccb.jhu.edu/software/kraken2)
 | **Total EuPathDB-Clean** |                                                                                                              |                     **245** | **2.3 GB**                                                                                         |   **9.1 GB** |
 
 *The genuses listed for FungiDB and MicrosporidiaDB are a subset of all genuses represented. For full list of genuses contained in these classes, see the publication supplementary table.  
-  
+
 ## Publications
 
 The publication associated with the data is located at:  
-J. Lu, S.L. Salzberg. (2018). "Removing contaminants from databases of draft genomes." *PLoS Comput Biol* <https://doi.org/10.1371/journal.pcbi.1006277>  
+J. Lu, S.L. Salzberg. (2018). "Removing contaminants from databases of draft genomes." 
+*PLoS Comput Biol* <https://doi.org/10.1371/journal.pcbi.1006277>  
 
 ## Authors/Contributors
 
